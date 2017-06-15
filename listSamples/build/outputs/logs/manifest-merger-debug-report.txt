@@ -1,0 +1,285 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:2:1-298:12
+	package
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:3:5-44
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:5:5-32
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [Groupon:viewpagerIndicator_library:unspecified] D:\Groupon\listSamples\build\intermediates\exploded-aar\Groupon\viewpagerIndicator_library\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:8:9-34
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+		INJECTED from D:\Groupon\listSamples\src\main\AndroidManifest.xml
+application
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:11:5-297:19
+MERGED from [com.android.support:support-v4:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:12:9-50
+	android:icon
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:13:9-38
+activity#com.viewpagerindicator.sample.ListSamples
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:15:9-23:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:17:13-48
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:16:13-40
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:21:27-74
+activity#com.viewpagerindicator.sample.SampleCirclesDefault
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:28:9-35:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:30:13-44
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:29:13-49
+intent-filter#android.intent.action.MAIN+com.jakewharton.android.viewpagerindicator.sample.SAMPLE
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:31:13-34:29
+category#com.jakewharton.android.viewpagerindicator.sample.SAMPLE
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:33:17-101
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:33:27-98
+activity#com.viewpagerindicator.sample.SampleCirclesInitialPage
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:36:9-43:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:38:13-49
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:37:13-53
+activity#com.viewpagerindicator.sample.SampleCirclesSnap
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:44:9-51:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:46:13-41
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:45:13-46
+activity#com.viewpagerindicator.sample.SampleCirclesStyledLayout
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:52:9-60:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:54:13-56
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:55:13-55
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:53:13-54
+activity#com.viewpagerindicator.sample.SampleCirclesStyledMethods
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:61:9-69:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:63:13-57
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:64:13-55
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:62:13-55
+activity#com.viewpagerindicator.sample.SampleCirclesStyledTheme
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:70:9-78:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:72:13-55
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:73:13-52
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:71:13-53
+activity#com.viewpagerindicator.sample.SampleCirclesWithListener
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:79:9-86:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:81:13-50
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:80:13-54
+activity#com.viewpagerindicator.sample.SampleIconsDefault
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:91:9-98:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:93:13-42
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:92:13-47
+activity#com.viewpagerindicator.sample.SampleLinesDefault
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:104:9-111:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:106:17-46
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:105:17-51
+activity#com.viewpagerindicator.sample.SampleLinesStyledLayout
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:112:9-120:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:114:17-58
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:115:17-59
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:113:17-56
+activity#com.viewpagerindicator.sample.SampleLinesStyledMethods
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:121:9-129:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:123:17-59
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:124:17-59
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:122:17-57
+activity#com.viewpagerindicator.sample.SampleLinesStyledTheme
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:130:9-138:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:132:17-57
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:133:17-56
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:131:17-55
+activity#com.viewpagerindicator.sample.SampleTitlesBottom
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:143:9-150:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:145:13-52
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:144:13-47
+activity#com.viewpagerindicator.sample.SampleTitlesCenterClickListener
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:151:9-158:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:153:13-57
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:152:13-60
+activity#com.viewpagerindicator.sample.SampleTitlesDefault
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:159:9-166:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:161:13-43
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:160:13-48
+activity#com.viewpagerindicator.sample.SampleTitlesInitialPage
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:167:9-174:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:169:13-48
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:168:13-52
+activity#com.viewpagerindicator.sample.SampleTitlesStyledLayout
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:175:9-183:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:177:13-55
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:178:13-55
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:176:13-53
+activity#com.viewpagerindicator.sample.SampleTitlesStyledMethods
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:184:9-192:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:186:13-56
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:187:13-55
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:185:13-54
+activity#com.viewpagerindicator.sample.SampleTitlesStyledTheme
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:193:9-201:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:195:13-54
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:196:13-52
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:194:13-52
+activity#com.viewpagerindicator.sample.SampleTitlesTriangle
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:202:9-209:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:204:13-50
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:203:13-49
+activity#com.viewpagerindicator.sample.SampleTitlesWithListener
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:210:9-217:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:212:13-49
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:211:13-53
+activity#com.viewpagerindicator.sample.SampleTabsDefault
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:222:9-230:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:224:13-41
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:225:13-63
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:223:13-46
+activity#com.viewpagerindicator.sample.SampleTabsStyled
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:231:9-239:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:233:13-40
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:234:13-52
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:232:13-45
+activity#com.viewpagerindicator.sample.SampleTabsWithIcons
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:240:7-248:18
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:242:11-42
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:243:11-50
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:241:11-46
+activity#com.viewpagerindicator.sample.SampleUnderlinesDefault
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:253:9-260:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:255:17-51
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:254:17-56
+activity#com.viewpagerindicator.sample.SampleUnderlinesNoFade
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:261:9-268:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:263:17-51
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:262:17-55
+activity#com.viewpagerindicator.sample.SampleUnderlinesStyledLayout
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:269:9-277:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:271:17-63
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:272:17-59
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:270:17-61
+activity#com.viewpagerindicator.sample.SampleUnderlinesStyledMethods
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:278:9-286:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:280:17-64
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:281:17-59
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:279:17-62
+activity#com.viewpagerindicator.sample.SampleUnderlinesStyledTheme
+ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:287:9-295:20
+	android:label
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:289:17-62
+	android:theme
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:290:17-56
+	android:name
+		ADDED from D:\Groupon\listSamples\src\main\AndroidManifest.xml:288:17-60
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:support-v4:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:support-v4:25.3.1] D:\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:26:9-47

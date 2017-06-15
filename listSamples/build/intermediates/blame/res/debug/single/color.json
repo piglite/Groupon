@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
+        "source": "D:\\Groupon\\listSamples\\build\\intermediates\\exploded-aar\\Groupon\\viewpagerIndicator_library\\unspecified\\res\\color\\vpi__light_theme.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
+        "source": "D:\\Groupon\\listSamples\\build\\intermediates\\exploded-aar\\Groupon\\viewpagerIndicator_library\\unspecified\\res\\color\\vpi__dark_theme.xml"
+    }
+]

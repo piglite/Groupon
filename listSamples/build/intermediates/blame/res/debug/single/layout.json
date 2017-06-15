@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_underlines.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_underlines.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_titles.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles_bottom.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_titles_bottom.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_icons.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_icons.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\themed_titles.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\themed_titles.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_tabs.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_tabs.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\themed_lines.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\themed_lines.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\themed_circles.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\themed_circles.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\themed_underlines.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\themed_underlines.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_circles.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles_vertical.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_circles_vertical.xml"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\layout\\simple_lines.xml",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\layout\\simple_lines.xml"
+    }
+]
