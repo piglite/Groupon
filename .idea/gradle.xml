@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/listSamples" />
+            <option value="$PROJECT_DIR$/pullToRefresh_Library" />
             <option value="$PROJECT_DIR$/viewpagerIndicator_library" />
           </set>
         </option>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="square_left_background">#FFFFFF</color>
+    <color name="square_right_background">#FFFFFF</color>
+    <color name="square_left_fontcolor">#9F4A4A</color>
+    <color name="square_left_subcolor">#DE2626</color>
+    <color name="square_right_fontcolor">#821313</color>
+    <color name="square_right_subcolor">#DE2626</color>
+    <color name="ad1_color">#FFC0BE</color>
+    <color name="ad2_color">#5AA5E9</color>
+    <color name="ad3_color">#B7E6EA</color>
+    <color name="ad4_color">#FFCEAE</color>
+    <color name="categories_title">#333333</color>
+    <color name="categories_subtitle">#A6A6A6</color>
+
+</resources>

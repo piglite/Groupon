@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable\\vpi__tab_indicator.xml",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable\\vpi__tab_indicator.xml"
-    },
-    {
         "merged": "D:\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable\\vpi__tab_indicator.xml",
         "source": "D:\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable\\vpi__tab_indicator.xml"
     }

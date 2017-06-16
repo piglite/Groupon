@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Groupon\pullToRefresh_Library\src\main\assets"/><source path="D:\Groupon\pullToRefresh_Library\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Groupon\pullToRefresh_Library\src\debug\assets"/></dataSet></merger>
