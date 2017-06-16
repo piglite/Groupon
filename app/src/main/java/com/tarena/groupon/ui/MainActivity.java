@@ -133,7 +133,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void onScroll(AbsListView absListView, int i, int i1, int i2) {
-               // Log.d("TAG", "onScroll方法被调用：第一个参数： "+i+",第二个参数："+i1+",第三个参数："+i2);
                 if(i==0){
                    cityContainer.setVisibility(View.VISIBLE);
                     ivAdd.setVisibility(View.VISIBLE);
