@@ -7,5 +7,5 @@ package com.tarena.groupon.config;
 public class Constant {
 
     public static final String FIRST = "first";
-
+    public static final String BASEURL = "http://api.dianping.com/v1/";
 }

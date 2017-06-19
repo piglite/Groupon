@@ -271,7 +271,11 @@ public class MainActivity extends Activity {
         //3)将解析结果放到View中显示
         //放到ListView中显示需要适配器、条目布局
 
-        HttpUtil.testHttpURLConnection();
+        //HttpUtil.testHttpURLConnection();
+        //HttpUtil.testVolley();
+        HttpUtil.testRetrofit();
 
     }
+
+
 }

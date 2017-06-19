@@ -1,6 +1,13 @@
 package com.tarena.groupon.util;
 
+import android.content.Context;
 import android.util.Log;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.tarena.groupon.app.MyApp;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -17,6 +24,11 @@ import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
  * 网络访问工具类
@@ -38,8 +50,8 @@ import java.util.Map;
 
 public class HttpUtil {
 
-    private static final String APPKEY = "49814079";
-    private static final String APPSECRET = "90e3438a41d646848033b6b9d461ed54";
+    public static final String APPKEY = "49814079";
+    public static final String APPSECRET = "90e3438a41d646848033b6b9d461ed54";
 
     /**
      * 获得满足大众点评服务器要求的请求路径
@@ -68,7 +80,7 @@ public class HttpUtil {
      * @param params
      * @return
      */
-    private static String getSign(String appkey, String appsecret, Map<String, String> params) {
+    public static String getSign(String appkey, String appsecret, Map<String, String> params) {
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -96,7 +108,7 @@ public class HttpUtil {
      * @param params
      * @return
      */
-    private static String getQuery(String appkey, String sign, Map<String, String> params) {
+    public static String getQuery(String appkey, String sign, Map<String, String> params) {
         try {
             // 添加签名
             StringBuilder stringBuilder = new StringBuilder();
@@ -151,6 +163,18 @@ public class HttpUtil {
                 }
             }
         }.start();
+    }
+
+
+    public static void testVolley(){
+
+        VolleyClient.getInstance().test();
+
+
+    }
+
+    public static void testRetrofit(){
+       RetrofitClient.getInstance().test();
     }
 
 
