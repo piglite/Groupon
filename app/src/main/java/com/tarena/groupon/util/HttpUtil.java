@@ -2,12 +2,16 @@ package com.tarena.groupon.util;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
+import com.tarena.groupon.R;
 import com.tarena.groupon.app.MyApp;
+import com.tarena.groupon.bean.TuanBean;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -176,6 +180,24 @@ public class HttpUtil {
     public static void testRetrofit(){
        RetrofitClient.getInstance().test();
     }
+
+    public static void getDailyDealsByVolley(String city, Response.Listener<TuanBean> listener){
+        VolleyClient.getInstance().getDailyDeals2(city,listener);
+    }
+
+    public static void getDailyDealsByRetrofit(String city,Callback<TuanBean> callback){
+        RetrofitClient.getInstance().getDailyDeals3(city,callback);
+    }
+
+    public static void loadImage(String url,ImageView iv){
+        VolleyClient.getInstance().loadImage(url,iv);
+    }
+
+    public static void displayImage(String url,ImageView iv){
+        Picasso.with(MyApp.CONTEXT).load(url).placeholder(R.drawable.bucket_no_picture).error(R.drawable.bucket_no_picture).into(iv);
+    }
+
+
 
 
 }

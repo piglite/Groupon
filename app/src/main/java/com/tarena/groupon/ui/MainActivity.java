@@ -17,10 +17,15 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Response;
+import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.tarena.groupon.R;
+import com.tarena.groupon.adapter.DealAdapter;
+import com.tarena.groupon.bean.TuanBean;
 import com.tarena.groupon.util.HttpUtil;
 
 import java.util.ArrayList;
@@ -29,6 +34,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class MainActivity extends Activity {
 
@@ -48,8 +55,8 @@ public class MainActivity extends Activity {
     PullToRefreshListView ptrListView;
 
     ListView listView;
-    List<String> datas;
-    ArrayAdapter<String> adapter;
+    List<TuanBean.Deal> datas;
+    DealAdapter adapter;
 
     //脚部
     @BindView(R.id.rg_main_footer)
@@ -66,37 +73,35 @@ public class MainActivity extends Activity {
     }
 
     @OnClick(R.id.ll_header_left_container)
-    public void jumpToCity(View view){
-        Intent intent = new Intent(this,CityActivity.class);
+    public void jumpToCity(View view) {
+        Intent intent = new Intent(this, CityActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.iv_header_main_add)
-    public void toggleMenu(View view){
-        if(menuLayout.getVisibility()==View.VISIBLE){
+    public void toggleMenu(View view) {
+        if (menuLayout.getVisibility() == View.VISIBLE) {
             menuLayout.setVisibility(View.INVISIBLE);
-        }else{
+        } else {
             menuLayout.setVisibility(View.VISIBLE);
         }
 
     }
 
 
-
-
     private void initListView() {
 
         listView = ptrListView.getRefreshableView();
-        datas = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,datas);
+        datas = new ArrayList<TuanBean.Deal>();
+        adapter = new DealAdapter(this, datas);
         //为ListView添加若干个头部
         LayoutInflater inflater = LayoutInflater.from(this);
 
         View listHeaderIcons = inflater.inflate(R.layout.header_list_icons, listView, false);
-        View listHeaderSquares =inflater.inflate(R.layout.header_list_square,listView,false);
+        View listHeaderSquares = inflater.inflate(R.layout.header_list_square, listView, false);
         View listHeaderAds = inflater.inflate(R.layout.header_list_ads, listView, false);
-        View listHeaderCategories = inflater.inflate(R.layout.header_list_categories,listView,false);
-        View listHeaderRecommend = inflater.inflate(R.layout.header_list_recommend,listView,false);
+        View listHeaderCategories = inflater.inflate(R.layout.header_list_categories, listView, false);
+        View listHeaderRecommend = inflater.inflate(R.layout.header_list_recommend, listView, false);
 
         listView.addHeaderView(listHeaderIcons);
         listView.addHeaderView(listHeaderSquares);
@@ -113,14 +118,16 @@ public class MainActivity extends Activity {
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
 
-                new Handler().postDelayed(new Runnable() {
+               /* new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         datas.add(0,"新增内容");
                         adapter.notifyDataSetChanged();
                         ptrListView.onRefreshComplete();
                     }
-                }, 1500);
+                }, 1500);*/
+
+                refresh();
 
             }
         });
@@ -134,10 +141,10 @@ public class MainActivity extends Activity {
 
             @Override
             public void onScroll(AbsListView absListView, int i, int i1, int i2) {
-                if(i==0){
-                   cityContainer.setVisibility(View.VISIBLE);
+                if (i == 0) {
+                    cityContainer.setVisibility(View.VISIBLE);
                     ivAdd.setVisibility(View.VISIBLE);
-                }else{
+                } else {
                     cityContainer.setVisibility(View.GONE);
                     ivAdd.setVisibility(View.GONE);
                 }
@@ -164,21 +171,21 @@ public class MainActivity extends Activity {
 
             @Override
             public boolean isViewFromObject(View view, Object object) {
-                return view==object;
+                return view == object;
             }
 
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
 
-                int layoutId = resIDs[position%3];
-                View view = LayoutInflater.from(MainActivity.this).inflate(layoutId,viewPager,false);
+                int layoutId = resIDs[position % 3];
+                View view = LayoutInflater.from(MainActivity.this).inflate(layoutId, viewPager, false);
                 container.addView(view);
                 return view;
             }
 
             @Override
             public void destroyItem(ViewGroup container, int position, Object object) {
-               container.removeView((View) object);
+                container.removeView((View) object);
             }
         };
 
@@ -202,7 +209,7 @@ public class MainActivity extends Activity {
                 iv2.setImageResource(R.drawable.banner_dot);
                 iv3.setImageResource(R.drawable.banner_dot);
 
-                switch (position%3){
+                switch (position % 3) {
                     case 0:
                         iv1.setImageResource(R.drawable.banner_dot_pressed);
                         break;
@@ -236,17 +243,6 @@ public class MainActivity extends Activity {
      */
     private void refresh() {
 
-        datas.add("aaa");
-        datas.add("bbb");
-        datas.add("ccc");
-        datas.add("ddd");
-        datas.add("eee");
-        datas.add("fff");
-        datas.add("ggg");
-        datas.add("hhh");
-        datas.add("jjj");
-        adapter.notifyDataSetChanged();
-
         //1)发起一个请求，服务器响应
         //以GET的方式发起请求
         //请求格式：http://xxx.xxxx.com/xxx？key=14xxxxxxx&city=%e8%f8%c6%xx%xx%xx
@@ -255,7 +251,45 @@ public class MainActivity extends Activity {
 
         //Volley
 
+        /*HttpUtil.getDailyDealsByVolley(tvCity.getText().toString(), new Response.Listener<TuanBean>() {
+            @Override
+            public void onResponse(TuanBean s) {
+                if (s != null) {
+                    List<TuanBean.Deal> deals = s.getDeals();
+                    //将deals放到ListView中呈现
+                    adapter.addAll(deals, true);
+                } else {
+                    //今日无新增团购内容
+                    Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
+                }
+                ptrListView.onRefreshComplete();
+
+
+            }
+        });*/
+
         //Retrofit+OKHttp
+
+        HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
+            @Override
+            public void onResponse(Call<TuanBean> call, retrofit2.Response<TuanBean> response) {
+                if(response!=null){
+                    TuanBean tuanBean = response.body();
+                    List<TuanBean.Deal> deals = tuanBean.getDeals();
+                    adapter.addAll(deals,true);
+                }else{
+                    Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
+                }
+                ptrListView.onRefreshComplete();
+            }
+
+            @Override
+            public void onFailure(Call<TuanBean> call, Throwable throwable) {
+                Log.d("TAG", "onFailure: "+throwable.getMessage());
+                ptrListView.onRefreshComplete();
+            }
+        });
+
 
         //2)根据服务器响应的内容进行解析
         // JSON字符串 / XML文档
@@ -273,7 +307,7 @@ public class MainActivity extends Activity {
 
         //HttpUtil.testHttpURLConnection();
         //HttpUtil.testVolley();
-        HttpUtil.testRetrofit();
+        //HttpUtil.testRetrofit();
 
     }
 
