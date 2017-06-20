@@ -1,7 +1,0 @@
-#Thu Jun 15 15:50:34 CST 2017
-base.0=D\:\\Groupon\\listSamples\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_ee801de339d799bee53aad76c626fbbd7cf0bfed
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=D\:\\Groupon\\listSamples\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_e05d84e4ddd658a6bb96d0f191fad14d22ca3c34\\classes.dex
-base.1=D\:\\Groupon\\listSamples\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_e05d84e4ddd658a6bb96d0f191fad14d22ca3c34
-file.0=D\:\\Groupon\\listSamples\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_ee801de339d799bee53aad76c626fbbd7cf0bfed\\classes.dex

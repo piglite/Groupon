@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="3dp"
+    android:orientation="horizontal" >
+
+    <RadioGroup
+        android:id="@+id/rg_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_home"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/rb_home_selector"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@color/rb_home_text_selector"
+            android:textSize="12sp"
+            android:layout_width="0dp" />
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_tuan"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_tuan_selector"
+            android:gravity="center"
+            android:text="闪惠团购"
+            android:textColor="@color/rb_home_text_selector"
+            android:textSize="12sp"
+            android:layout_width="0dp" />
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_find"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_find_selector"
+            android:gravity="center"
+            android:text="发现"
+            android:textColor="@color/rb_home_text_selector"
+            android:textSize="12sp"
+            android:layout_width="0dp" />
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_my"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_my_selector"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/rb_home_text_selector"
+            android:textSize="12sp"
+            android:layout_width="0dp" />
+    </RadioGroup>
+
+</LinearLayout>

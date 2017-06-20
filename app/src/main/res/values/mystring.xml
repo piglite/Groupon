@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="square_left_title">超豪华大奖</string>
+    <string name="square_left_subtitle">等你来拿</string>
+    <string name="square_right_title">倒计时开始</string>
+    <string name="square_right_subtitle">再晚就没了</string>
+    <string name="ad1_title">新人气餐馆</string>
+    <string name="ad1_subtitle">这碗超好吃</string>
+    <string name="ad2_title">小S喊你领</string>
+    <string name="ad2_subtitle">爱奇异礼包</string>
+    <string name="ad3_title">好礼0元领</string>
+    <string name="ad3_subtitle">更有礼券送</string>
+    <string name="ad4_title">广发分享日</string>
+    <string name="ad4_subtitle">周五享半价</string>
+    <string name="categories1_title">结婚</string>
+    <string name="categories1_subtitle">真爱行动</string>
+    <string name="categories2_title">亲子</string>
+    <string name="categories2_subtitle">免费抢童车</string>
+    <string name="categories3_title">购物</string>
+    <string name="categories3_subtitle">嗨玩周末</string>
+    <string name="categories4_title">学习培训</string>
+    <string name="categories4_subtitle">免费领料理机</string>
+    <string name="categories5_title">家装</string>
+    <string name="categories5_subtitle">晒绿植赢香水</string>
+    <string name="categories6_title">体检齿科</string>
+    <string name="categories6_subtitle">感恩父亲节</string>
+    <string name="categories7_title">演唱会</string>
+    <string name="categories7_subtitle">话剧亲子剧</string>
+    <string name="recommend1_title">一波现金券@你</string>
+    <string name="recommend1_subtitle">毕业季一起对话童年</string>
+    <string name="recommend2_title">小S喊你免费领</string>
+    <string name="recommend2_subtitle">耳机、涂色书等礼包</string>
+    <string name="recommend3_title">开扒新人气餐馆</string>
+    <string name="recommend3_subtitle">这碗今夏最销魂</string>
+</resources>

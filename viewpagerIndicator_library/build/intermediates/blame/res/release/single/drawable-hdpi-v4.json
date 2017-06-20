@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
         "merged": "D:\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
         "source": "D:\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_focused_holo.9.png"
     },
@@ -16,24 +12,8 @@
         "source": "D:\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_unselected_pressed_holo.9.png"
-    },
-    {
         "merged": "D:\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
         "source": "D:\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_unselected_pressed_holo.9.png"
-    },
-    {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_unselected_focused_holo.9.png"
-    },
-    {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_holo.9.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_holo.9.png"
-    },
-    {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_unselected_holo.9.png"
     },
     {
         "merged": "D:\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_unselected_holo.9.png",
@@ -42,9 +22,5 @@
     {
         "merged": "D:\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
         "source": "D:\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\viewpagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_focused_holo.9.png"
     }
 ]
