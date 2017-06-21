@@ -2,6 +2,7 @@ package com.tarena.groupon.util;
 
 import android.util.Log;
 
+import com.tarena.groupon.bean.CityBean;
 import com.tarena.groupon.bean.TuanBean;
 import com.tarena.groupon.config.Constant;
 
@@ -243,6 +244,13 @@ public class RetrofitClient {
 
     }
 
+    public void getCities(Callback<CityBean> callback){
+
+        Call<CityBean> call = netService.getCities();
+        call.enqueue(callback);
+
+    }
+
 
     /**
      * OKHTTP的拦截器
@@ -273,7 +281,13 @@ public class RetrofitClient {
             Log.d("TAG", "原始请求路径------> "+urlString);
 
             StringBuilder sb = new StringBuilder(urlString);
-            sb.append("&").append("appkey=").append(HttpUtil.APPKEY);
+            if(set.size()==0){
+                //意味着原有请求路径中没有参数
+                sb.append("?");
+            }else{
+                sb.append("&");
+            }
+            sb.append("appkey=").append(HttpUtil.APPKEY);
             sb.append("&").append("sign=").append(sign);
             //http://baseurl/deal/get_daily_new_id_list?city=xxx&date=xxx&appkey=xxx&sign=xxx
             Log.d("TAG", "新的请求路径------>: "+sb.toString());

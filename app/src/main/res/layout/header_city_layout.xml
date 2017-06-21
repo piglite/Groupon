@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    >
+    
+    <ImageView 
+        android:id="@+id/iv_city_header_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yy_calendar_icon_previous"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        
+        />
+	
+    <LinearLayout 
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        >
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_left_press"
+			android:gravity="center"
+			android:text="全部"
+			android:textColor="#ffffffff"
+            />
+         <TextView 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_right_normal"
+			android:gravity="center"
+			android:text="海外"
+			android:textColor="#ff000000"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

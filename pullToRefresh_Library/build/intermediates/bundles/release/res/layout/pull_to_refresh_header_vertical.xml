@@ -13,7 +13,7 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical" >
+            android:layout_gravity="center" >
 
             <ImageView
                 android:id="@+id/pull_to_refresh_image"
@@ -31,7 +31,7 @@
                 android:visibility="gone" />
         </FrameLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -53,7 +53,7 @@
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:visibility="gone" />
-        </LinearLayout>
+        </LinearLayout>-->
     </FrameLayout>
 
 </merge>

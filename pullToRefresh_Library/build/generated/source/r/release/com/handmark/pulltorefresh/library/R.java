@@ -136,9 +136,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class drawable {
         public static int default_ptr_flip=0x7f020000;
         public static int default_ptr_rotate=0x7f020001;
-        public static int indicator_arrow=0x7f020002;
-        public static int indicator_bg_bottom=0x7f020003;
-        public static int indicator_bg_top=0x7f020004;
+        public static int dropdown_anim_00=0x7f020002;
+        public static int dropdown_anim_01=0x7f020003;
+        public static int dropdown_anim_02=0x7f020004;
+        public static int dropdown_anim_03=0x7f020005;
+        public static int dropdown_anim_04=0x7f020006;
+        public static int dropdown_anim_05=0x7f020007;
+        public static int dropdown_anim_06=0x7f020008;
+        public static int dropdown_anim_07=0x7f020009;
+        public static int dropdown_anim_08=0x7f02000a;
+        public static int dropdown_anim_09=0x7f02000b;
+        public static int dropdown_anim_10=0x7f02000c;
+        public static int dropdown_loading_00=0x7f02000d;
+        public static int dropdown_loading_01=0x7f02000e;
+        public static int dropdown_loading_02=0x7f02000f;
+        public static int indicator_arrow=0x7f020010;
+        public static int indicator_bg_bottom=0x7f020011;
+        public static int indicator_bg_top=0x7f020012;
+        public static int refreshing_anim=0x7f020013;
     }
     public static final class id {
         public static int both=0x7f070003;
@@ -153,8 +168,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pullUpFromBottom=0x7f070009;
         public static int pull_to_refresh_image=0x7f07000d;
         public static int pull_to_refresh_progress=0x7f07000e;
-        public static int pull_to_refresh_sub_text=0x7f070010;
-        public static int pull_to_refresh_text=0x7f07000f;
         public static int rotate=0x7f07000b;
         public static int scrollview=0x7f070001;
         public static int webview=0x7f070002;

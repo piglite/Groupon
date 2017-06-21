@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\refreshing_anim.xml",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\refreshing_anim.xml"
+    },
+    {
         "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
         "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     },

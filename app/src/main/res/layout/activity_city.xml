@@ -1,13 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_city"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.tarena.groupon.ui.CityActivity">
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <include
+
+        layout="@layout/header_city_layout" />
+
+    <include
+
+        layout="@layout/city_search_layout" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_city_cities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

@@ -11,6 +11,7 @@ import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
 import com.tarena.groupon.R;
 import com.tarena.groupon.app.MyApp;
+import com.tarena.groupon.bean.CityBean;
 import com.tarena.groupon.bean.TuanBean;
 
 import org.apache.commons.codec.binary.Hex;
@@ -196,6 +197,20 @@ public class HttpUtil {
     public static void displayImage(String url,ImageView iv){
         Picasso.with(MyApp.CONTEXT).load(url).placeholder(R.drawable.bucket_no_picture).error(R.drawable.bucket_no_picture).into(iv);
     }
+
+    public static void getCitiesByRetrofit(Callback<CityBean> callback){
+        RetrofitClient.getInstance().getCities(callback);
+
+
+    }
+
+    public static void getCitiesByVolley(Response.Listener<String> listener){
+        VolleyClient.getInstance().getCities(listener);
+    }
+
+
+
+
 
 
 

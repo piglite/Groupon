@@ -1,11 +1,67 @@
 [
     {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_10.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_10.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_09.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_09.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_03.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_03.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_06.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_06.png"
+    },
+    {
         "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_rotate.png",
         "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_rotate.png"
     },
     {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_loading_02.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_loading_02.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_01.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_01.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_04.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_04.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_07.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_07.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_loading_00.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_loading_00.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_05.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_05.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_08.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_08.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_00.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_00.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_02.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_02.png"
+    },
+    {
         "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
         "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_loading_01.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_loading_01.png"
     },
     {
         "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_flip.png",

@@ -270,25 +270,33 @@ public class MainActivity extends Activity {
 
         //Retrofit+OKHttp
 
-        HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onResponse(Call<TuanBean> call, retrofit2.Response<TuanBean> response) {
-                if(response!=null){
-                    TuanBean tuanBean = response.body();
-                    List<TuanBean.Deal> deals = tuanBean.getDeals();
-                    adapter.addAll(deals,true);
-                }else{
-                    Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
-                }
-                ptrListView.onRefreshComplete();
-            }
+            public void run() {
+                HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
+                    @Override
+                    public void onResponse(Call<TuanBean> call, retrofit2.Response<TuanBean> response) {
+                        if(response!=null){
+                            TuanBean tuanBean = response.body();
+                            List<TuanBean.Deal> deals = tuanBean.getDeals();
+                            adapter.addAll(deals,true);
+                        }else{
+                            Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
+                        }
+                        ptrListView.onRefreshComplete();
+                    }
 
-            @Override
-            public void onFailure(Call<TuanBean> call, Throwable throwable) {
-                Log.d("TAG", "onFailure: "+throwable.getMessage());
-                ptrListView.onRefreshComplete();
+                    @Override
+                    public void onFailure(Call<TuanBean> call, Throwable throwable) {
+                        Log.d("TAG", "onFailure: "+throwable.getMessage());
+                        ptrListView.onRefreshComplete();
+                    }
+                });
             }
-        });
+        }, 2000);
+
+
+
 
 
         //2)根据服务器响应的内容进行解析
