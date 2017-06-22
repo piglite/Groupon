@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tarena.groupon">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".app.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".app.MyApp"
         android:theme="@android:style/Theme.Light.NoTitleBar">
         <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.SplashActivity">
@@ -18,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.GuideActivity" />
-        <activity android:name=".ui.CityActivity"></activity>
+        <activity android:name=".ui.CityActivity" />
+        <activity android:name=".ui.SearchActivity"></activity>
     </application>
 
 </manifest>

@@ -44,12 +44,12 @@
         "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-hdpi\\perm_group_device_alarms_selected.png"
     },
     {
-        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\perm_group_calendar_normal.png",
-        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-hdpi\\perm_group_calendar_normal.png"
-    },
-    {
         "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\perm_group_calendar_selected.png",
         "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-hdpi\\perm_group_calendar_selected.png"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\perm_group_calendar_normal.png",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-hdpi\\perm_group_calendar_normal.png"
     },
     {
         "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\custom_tab_indicator_divider.9.png",

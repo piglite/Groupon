@@ -26,4 +26,9 @@
         android:textColor="#ff000000"
         android:textSize="20sp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffff6633"/>
+
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,7 +76,7 @@ public class MainActivity extends Activity {
     @OnClick(R.id.ll_header_left_container)
     public void jumpToCity(View view) {
         Intent intent = new Intent(this, CityActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent,101);
     }
 
     @OnClick(R.id.iv_header_main_add)
@@ -235,7 +236,14 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+//        String city = getIntent().getStringExtra("city");
+//        if(!TextUtils.isEmpty(city)) {
+//            tvCity.setText(city);
+//        }else{
+//            tvCity.setText("北京");
+//        }
         refresh();
+
     }
 
     /**
@@ -319,5 +327,12 @@ public class MainActivity extends Activity {
 
     }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK && requestCode==101){
+            String city = data.getStringExtra("city");
+            tvCity.setText(city);
+        }
+    }
 }

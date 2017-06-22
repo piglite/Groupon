@@ -48,12 +48,12 @@
         "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_08.png"
     },
     {
-        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_00.png",
-        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_00.png"
-    },
-    {
         "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_02.png",
         "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_02.png"
+    },
+    {
+        "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_00.png",
+        "source": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_00.png"
     },
     {
         "merged": "D:\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
