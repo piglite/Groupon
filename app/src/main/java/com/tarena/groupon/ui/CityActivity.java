@@ -19,6 +19,7 @@ import com.tarena.groupon.bean.CitynameBean;
 import com.tarena.groupon.util.DBUtil;
 import com.tarena.groupon.util.HttpUtil;
 import com.tarena.groupon.util.PinYinUtil;
+import com.tarena.groupon.view.MyLetterView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,6 +44,9 @@ public class CityActivity extends Activity {
 
     DBUtil dbUtil;
 
+    @BindView(R.id.mlv_city)
+    MyLetterView myLetterView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,30 @@ public class CityActivity extends Activity {
         ButterKnife.bind(this);
 
         initRecyclerView();
+
+        myLetterView.setOnTouchLetterListener(new MyLetterView.OnTouchLetterListener() {
+            @Override
+            public void onTouchLetter(MyLetterView view, String letter) {
+
+                LinearLayoutManager manager = (LinearLayoutManager) recyclerView.getLayoutManager();
+
+
+                if ("热门".equals(letter)) {
+                    manager.scrollToPosition(0);
+                } else {
+                    int position = adapter.getPositionForSection(letter.charAt(0));
+                    if(adapter.getHeaderView()!=null){
+                        position += 1;
+                    }
+                    //RecyclerView移动到第position个视图位置
+                    //且该视图位于当前RecyclerView最顶端
+                    //当移动完毕后，如何设置offset值(非0)，则偏移offset个像素
+                    //如果大于0就往下偏移，如果小于0就往上偏移
+                    manager.scrollToPositionWithOffset(position,0);
+                }
+
+            }
+        });
 
 
     }
@@ -64,7 +92,7 @@ public class CityActivity extends Activity {
         datas = new ArrayList<CitynameBean>();
         adapter = new CityAdapter(this, datas);
         recyclerView.setAdapter(adapter);
-        View headerView = LayoutInflater.from(this).inflate(R.layout.header_list_cities,recyclerView,false);
+        View headerView = LayoutInflater.from(this).inflate(R.layout.header_list_cities, recyclerView, false);
         adapter.addHeaderView(headerView);
         adapter.setOnItemClickListener(new CityAdapter.OnItemClickListener() {
             @Override
@@ -74,13 +102,12 @@ public class CityActivity extends Activity {
                 String city = citynameBean.getCityName();
 
                 Intent data = new Intent();
-                data.putExtra("city",city);
-                setResult(RESULT_OK,data);
+                data.putExtra("city", city);
+                setResult(RESULT_OK, data);
 
                 finish();
             }
         });
-
 
 
     }
@@ -93,16 +120,16 @@ public class CityActivity extends Activity {
 
     private void refresh() {
         //从内存缓存中读取城市数据
-        if(MyApp.citynameBeanList!=null && MyApp.citynameBeanList.size()>0){
-            adapter.addAll(MyApp.citynameBeanList,true);
+        if (MyApp.citynameBeanList != null && MyApp.citynameBeanList.size() > 0) {
+            adapter.addAll(MyApp.citynameBeanList, true);
             Log.d("TAG", "城市数据从内存缓存中加载 ");
             return;
         }
 
         //从数据库中读取城市数据
         List<CitynameBean> list = dbUtil.query();
-        if(list!=null && list.size()>0){
-            adapter.addAll(list,true);
+        if (list != null && list.size() > 0) {
+            adapter.addAll(list, true);
 
             MyApp.citynameBeanList = list;
             Log.d("TAG", "城市数据从数据库中加载 ");
@@ -124,7 +151,7 @@ public class CityActivity extends Activity {
                 final List<CitynameBean> citynameBeanList = new ArrayList<CitynameBean>();
                 for (String name : list) {
 
-                    if (!name.equals("全国") && !name.equals("其它城市")&&!name.equals("点评实验室")) {
+                    if (!name.equals("全国") && !name.equals("其它城市") && !name.equals("点评实验室")) {
                         CitynameBean citynameBean = new CitynameBean();
                         citynameBean.setCityName(name);
                         citynameBean.setPyName(PinYinUtil.getPinYin(name));
@@ -148,13 +175,13 @@ public class CityActivity extends Activity {
                 MyApp.citynameBeanList = citynameBeanList;
 
                 //向数据库中写入城市数据
-                new Thread(){
+                new Thread() {
                     @Override
                     public void run() {
                         super.run();
                         long start = System.currentTimeMillis();
                         dbUtil.insertBatch(citynameBeanList);
-                        Log.d("TAG", "写入数据库完毕，耗时："+(System.currentTimeMillis()-start));
+                        Log.d("TAG", "写入数据库完毕，耗时：" + (System.currentTimeMillis() - start));
 
                     }
                 }.start();
@@ -170,23 +197,25 @@ public class CityActivity extends Activity {
     }
 
     @OnClick(R.id.tv_city_search)
-    public void jumpTo(View view){
+    public void jumpTo(View view) {
 
-        Intent intent = new Intent(CityActivity.this,SearchActivity.class);
-        startActivityForResult(intent,101);
+        Intent intent = new Intent(CityActivity.this, SearchActivity.class);
+        startActivityForResult(intent, 101);
 
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode==RESULT_OK && requestCode==101){
+        if (resultCode == RESULT_OK && requestCode == 101) {
             //data中取出搜索后点击的城市名称
 //            Intent data2 = new Intent();
 //            String city = data.getStringExtra("city");
 //            data2.putExtra("city",city);
-            setResult(RESULT_OK,data);
+            setResult(RESULT_OK, data);
             finish();
         }
     }
+
+
 }

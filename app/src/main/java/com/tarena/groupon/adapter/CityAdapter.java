@@ -62,6 +62,10 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
         }
     }
 
+    public View getHeaderView(){
+        return headerView;
+    }
+
 
     @Override
     public int getItemViewType(int position) {

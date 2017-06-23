@@ -180,6 +180,19 @@ public class MainActivity extends Activity {
 
                 int layoutId = resIDs[position % 3];
                 View view = LayoutInflater.from(MainActivity.this).inflate(layoutId, viewPager, false);
+                if(position%3==0){
+
+                    View foodView = view.findViewById(R.id.ll_icons_list_food);
+                    foodView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(MainActivity.this,BusinessActivity.class);
+                            intent.putExtra("city",tvCity.getText().toString());
+                            startActivity(intent);
+
+                        }
+                    });
+                }
                 container.addView(view);
                 return view;
             }

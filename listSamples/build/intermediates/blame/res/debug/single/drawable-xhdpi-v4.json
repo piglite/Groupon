@@ -16,11 +16,11 @@
         "source": "D:\\Groupon\\listSamples\\build\\intermediates\\exploded-aar\\Groupon\\viewpagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
-        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "D:\\Groupon\\listSamples\\build\\intermediates\\exploded-aar\\Groupon\\viewpagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png"
-    },
-    {
         "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
         "source": "D:\\Groupon\\listSamples\\build\\intermediates\\exploded-aar\\Groupon\\viewpagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "D:\\Groupon\\listSamples\\build\\intermediates\\exploded-aar\\Groupon\\viewpagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png"
     }
 ]
