@@ -3,6 +3,7 @@ package com.tarena.groupon.app;
 import android.app.Application;
 
 import com.tarena.groupon.bean.CitynameBean;
+import com.tarena.groupon.util.SPUtil;
 
 import java.util.List;
 
@@ -21,5 +22,7 @@ public class MyApp extends Application{
     public void onCreate() {
         super.onCreate();
         CONTEXT = this;
+        SPUtil spUtil = new SPUtil(this);
+        spUtil.setCloseBanner(false);
     }
 }

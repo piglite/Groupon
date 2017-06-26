@@ -1,8 +1,11 @@
 package com.tarena.groupon.util;
 
+import android.text.TextUtils;
 import android.util.Log;
 
+import com.tarena.groupon.bean.BusinessBean;
 import com.tarena.groupon.bean.CityBean;
+import com.tarena.groupon.bean.DistrictBean;
 import com.tarena.groupon.bean.TuanBean;
 import com.tarena.groupon.config.Constant;
 
@@ -247,6 +250,28 @@ public class RetrofitClient {
     public void getCities(Callback<CityBean> callback){
 
         Call<CityBean> call = netService.getCities();
+        call.enqueue(callback);
+
+    }
+
+    public void getFoods(String city, String region, Callback<BusinessBean> callback){
+
+        Map<String,String> params = new HashMap<String,String>();
+        params.put("city",city);
+        params.put("category","美食");
+        if(!TextUtils.isEmpty(region)){
+            params.put("region",region);
+        }
+        Call<BusinessBean> call = netService.getFoods(params);
+        call.enqueue(callback);
+
+    }
+
+    public void getDistricts(String city, Callback<DistrictBean> callback){
+
+        Map<String,String> params = new HashMap<String,String>();
+        params.put("city",city);
+        Call<DistrictBean> call = netService.getDistricts(params);
         call.enqueue(callback);
 
     }

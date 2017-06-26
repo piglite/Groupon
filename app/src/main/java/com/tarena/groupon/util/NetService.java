@@ -1,6 +1,8 @@
 package com.tarena.groupon.util;
 
+import com.tarena.groupon.bean.BusinessBean;
 import com.tarena.groupon.bean.CityBean;
+import com.tarena.groupon.bean.DistrictBean;
 import com.tarena.groupon.bean.TuanBean;
 
 import java.util.Map;
@@ -36,4 +38,9 @@ public interface NetService {
     @GET("metadata/get_cities_with_businesses")
     public Call<CityBean> getCities();
 
+    @GET("business/find_businesses")
+    public Call<BusinessBean> getFoods(@QueryMap Map<String,String> params);
+
+    @GET("metadata/get_regions_with_businesses")
+    public Call<DistrictBean> getDistricts(@QueryMap Map<String,String> params);
 }

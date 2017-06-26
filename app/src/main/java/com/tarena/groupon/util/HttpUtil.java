@@ -11,7 +11,9 @@ import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
 import com.tarena.groupon.R;
 import com.tarena.groupon.app.MyApp;
+import com.tarena.groupon.bean.BusinessBean;
 import com.tarena.groupon.bean.CityBean;
+import com.tarena.groupon.bean.DistrictBean;
 import com.tarena.groupon.bean.TuanBean;
 
 import org.apache.commons.codec.binary.Hex;
@@ -208,6 +210,23 @@ public class HttpUtil {
         VolleyClient.getInstance().getCities(listener);
     }
 
+    public static void getFoodsByVolley(String city, String region, Response.Listener<String> listener){
+        VolleyClient.getInstance().getFoods(city,region,listener);
+    }
+
+    public static void getFoodsByRetrofit(String city, String region, Callback<BusinessBean> callback){
+        RetrofitClient.getInstance().getFoods(city,region,callback);
+    }
+
+    public static void getDistrictsByVolley(String city, Response.Listener<String> listener){
+
+        VolleyClient.getInstance().getDistricts(city,listener);
+
+    }
+
+    public static void getDistrictsByRetrofit(String city, Callback<DistrictBean> callback){
+        RetrofitClient.getInstance().getDistricts(city,callback);
+    }
 
 
 

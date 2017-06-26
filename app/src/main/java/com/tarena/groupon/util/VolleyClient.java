@@ -3,6 +3,7 @@ package com.tarena.groupon.util;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -25,6 +26,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -242,6 +244,31 @@ public class VolleyClient {
 
         Map<String,String> params = new HashMap<String,String>();
         String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_cities_with_businesses",params);
+        StringRequest req = new StringRequest(url,listener,null);
+        queue.add(req);
+
+    }
+
+    public void getFoods(String city, String region, Response.Listener<String> listener){
+
+        Map<String,String> params = new HashMap<String,String>();
+        params.put("city",city);
+        params.put("category","美食");
+        if(!TextUtils.isEmpty(region)){
+            params.put("region",region);
+        }
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/business/find_businesses",params);
+        StringRequest req = new StringRequest(url,listener,null);
+        queue.add(req);
+
+    }
+
+    public void getDistricts(String city, Response.Listener<String> listener){
+
+
+        Map<String,String> params = new HashMap<String,String>();
+        params.put("city",city);
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_regions_with_businesses",params);
         StringRequest req = new StringRequest(url,listener,null);
         queue.add(req);
 
