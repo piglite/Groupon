@@ -1,6 +1,7 @@
 package com.tarena.groupon.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -94,6 +95,26 @@ public class BusinessActivity extends Activity {
         d.start();
 
         listView.setEmptyView(ivLoading);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                BusinessBean.Business business;
+
+                if(sputil.isCloseBanner()){
+                    business = adapter.getItem(i);
+                }else{
+                    business = adapter.getItem(i-1);
+                }
+
+                Intent intent = new Intent(BusinessActivity.this,DetailActivity.class);
+                intent.putExtra("business",business);
+                startActivity(intent);
+
+            }
+        });
+
 
         leftDatas = new ArrayList<String>();
         leftAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, leftDatas);

@@ -48,12 +48,12 @@
         "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_normal.png"
     },
     {
-        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\perm_group_camera_normal.png",
-        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
-    },
-    {
         "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\custom_tab_indicator_selected_pressed.9.png",
         "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_pressed.9.png"
+    },
+    {
+        "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\perm_group_camera_normal.png",
+        "source": "D:\\Groupon\\listSamples\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
     },
     {
         "merged": "D:\\Groupon\\listSamples\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\perm_group_device_alarms_normal.png",

@@ -43,4 +43,5 @@ dependencies {
     compile files('libs/ormlite-core-5.0.jar')
     compile files('libs/pinyin4j-2.5.1.jar')
     compile 'com.android.support:recyclerview-v7:25+'
+    compile files('libs/jsoup-1.10.3.jar')
 }

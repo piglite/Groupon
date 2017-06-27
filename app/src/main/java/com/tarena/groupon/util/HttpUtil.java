@@ -1,6 +1,8 @@
 package com.tarena.groupon.util;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -18,8 +20,11 @@ import com.tarena.groupon.bean.TuanBean;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -226,6 +231,35 @@ public class HttpUtil {
 
     public static void getDistrictsByRetrofit(String city, Callback<DistrictBean> callback){
         RetrofitClient.getInstance().getDistricts(city,callback);
+    }
+
+    public static void getComment(final String url, final OnResponseListener<Document> listener){
+
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    final Document document = Jsoup.connect(url).get();
+
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            listener.onResponse(document);
+                        }
+                    });
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+    }
+
+    public interface OnResponseListener<T>{
+        void onResponse(T t);
     }
 
 
