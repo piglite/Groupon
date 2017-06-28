@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -59,10 +60,10 @@ public class VolleyClient {
         queue = Volley.newRequestQueue(MyApp.CONTEXT);
         imageLoader = new ImageLoader(queue, new ImageLoader.ImageCache() {
             //least recently use
-            LruCache<String,Bitmap> cache = new LruCache<String,Bitmap>((int) (Runtime.getRuntime().maxMemory()/8)){
+            LruCache<String, Bitmap> cache = new LruCache<String, Bitmap>((int) (Runtime.getRuntime().maxMemory() / 8)) {
                 @Override
                 protected int sizeOf(String key, Bitmap value) {
-                    return value.getHeight()*value.getRowBytes();
+                    return value.getHeight() * value.getRowBytes();
                 }
             };
 
@@ -73,7 +74,7 @@ public class VolleyClient {
 
             @Override
             public void putBitmap(String s, Bitmap bitmap) {
-                cache.put(s,bitmap);
+                cache.put(s, bitmap);
             }
         });
     }
@@ -102,18 +103,18 @@ public class VolleyClient {
     /**
      * 利用Volly去获取城市今日新增的团购信息
      *
-     * @param city 获取该城市名称的团购信息
+     * @param city     获取该城市名称的团购信息
      * @param listener
      */
-    public void getDailyDeals(String city, final Response.Listener<String> listener){
+    public void getDailyDeals(String city, final Response.Listener<String> listener) {
 
         //1)获取新增团购的ID列表
 
-        final Map<String,String> params = new HashMap<String,String>();
-        params.put("city",city);
+        final Map<String, String> params = new HashMap<String, String>();
+        params.put("city", city);
         String date = new SimpleDateFormat("yyyy-MM-dd").format(System.currentTimeMillis());
-        params.put("date",date);
-        String url = HttpUtil.getURL("http://api.dianping.com/v1/deal/get_daily_new_id_list",params);
+        params.put("date", date);
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/deal/get_daily_new_id_list", params);
         StringRequest req = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
@@ -126,22 +127,22 @@ public class VolleyClient {
 
                 //利用Jsonlib(JSONObject)提取团购ID
                 try {
-                    JSONObject jsonObject= new JSONObject(s);
+                    JSONObject jsonObject = new JSONObject(s);
                     JSONArray jsonArray = jsonObject.getJSONArray("id_list");
 
                     int size = jsonArray.length();
-                    if(size>40){
+                    if (size > 40) {
                         size = 40;
                     }
 
                     StringBuilder sb = new StringBuilder();
 
-                    for(int i=0;i<size;i++){
+                    for (int i = 0; i < size; i++) {
                         String id = jsonArray.getString(i);
                         sb.append(id).append(",");
                     }
 
-                    if(sb.length()>0) {
+                    if (sb.length() > 0) {
                         //"1-33946,1-4531,1-4571.."
                         String idlist = sb.substring(0, sb.length() - 1);
 
@@ -151,7 +152,7 @@ public class VolleyClient {
                         String url2 = HttpUtil.getURL("http://api.dianping.com/v1/deal/get_batch_deals_by_id", params2);
                         StringRequest req2 = new StringRequest(url2, listener, null);
                         queue.add(req2);
-                    }else{
+                    } else {
                         //该城市今日无新增团购
                         listener.onResponse(null);
                     }
@@ -160,7 +161,7 @@ public class VolleyClient {
                     e.printStackTrace();
                 }
             }
-        },null);
+        }, null);
 
         queue.add(req);
 
@@ -168,23 +169,24 @@ public class VolleyClient {
 
     /**
      * 显示网络中的一幅图片
+     *
      * @param url 图片在网络中的地址
      * @param iv  显示图片的控件
      */
-    public void loadImage(String url,ImageView iv){
+    public void loadImage(String url, ImageView iv) {
 
-        ImageLoader.ImageListener listener = ImageLoader.getImageListener(iv, R.drawable.bucket_no_picture,R.drawable.bucket_no_picture);
-        imageLoader.get(url,listener);
+        ImageLoader.ImageListener listener = ImageLoader.getImageListener(iv, R.drawable.bucket_no_picture, R.drawable.bucket_no_picture);
+        imageLoader.get(url, listener);
     }
 
-    public void getDailyDeals2(String city, final Response.Listener<TuanBean> listener){
+    public void getDailyDeals2(String city, final Response.Listener<TuanBean> listener) {
         //1)获取新增团购的ID列表
 
-        final Map<String,String> params = new HashMap<String,String>();
-        params.put("city",city);
+        final Map<String, String> params = new HashMap<String, String>();
+        params.put("city", city);
         String date = new SimpleDateFormat("yyyy-MM-dd").format(System.currentTimeMillis());
-        params.put("date",date);
-        String url = HttpUtil.getURL("http://api.dianping.com/v1/deal/get_daily_new_id_list",params);
+        params.put("date", date);
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/deal/get_daily_new_id_list", params);
         StringRequest req = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
@@ -197,22 +199,22 @@ public class VolleyClient {
 
                 //利用Jsonlib(JSONObject)提取团购ID
                 try {
-                    JSONObject jsonObject= new JSONObject(s);
+                    JSONObject jsonObject = new JSONObject(s);
                     JSONArray jsonArray = jsonObject.getJSONArray("id_list");
 
                     int size = jsonArray.length();
-                    if(size>40){
+                    if (size > 40) {
                         size = 40;
                     }
 
                     StringBuilder sb = new StringBuilder();
 
-                    for(int i=0;i<size;i++){
+                    for (int i = 0; i < size; i++) {
                         String id = jsonArray.getString(i);
                         sb.append(id).append(",");
                     }
 
-                    if(sb.length()>0) {
+                    if (sb.length() > 0) {
                         //"1-33946,1-4531,1-4571.."
                         String idlist = sb.substring(0, sb.length() - 1);
 
@@ -220,9 +222,9 @@ public class VolleyClient {
                         Map<String, String> params2 = new HashMap<String, String>();
                         params2.put("deal_ids", idlist);
                         String url2 = HttpUtil.getURL("http://api.dianping.com/v1/deal/get_batch_deals_by_id", params2);
-                        TuanBeanRequest req2 = new TuanBeanRequest(url2,listener);
+                        TuanBeanRequest req2 = new TuanBeanRequest(url2, listener);
                         queue.add(req2);
-                    }else{
+                    } else {
                         //该城市今日无新增团购
                         listener.onResponse(null);
                     }
@@ -231,45 +233,50 @@ public class VolleyClient {
                     e.printStackTrace();
                 }
             }
-        },null);
+        }, null);
 
         queue.add(req);
 
 
-
-
     }
 
-    public void getCities(Response.Listener<String> listener){
+    public void getCities(Response.Listener<String> listener) {
 
-        Map<String,String> params = new HashMap<String,String>();
-        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_cities_with_businesses",params);
-        StringRequest req = new StringRequest(url,listener,null);
+        Map<String, String> params = new HashMap<String, String>();
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_cities_with_businesses", params);
+        StringRequest req = new StringRequest(url, listener, null);
         queue.add(req);
 
     }
 
-    public void getFoods(String city, String region, Response.Listener<String> listener){
+    public void getFoods(String city, String region, Response.Listener<String> listener) {
 
-        Map<String,String> params = new HashMap<String,String>();
-        params.put("city",city);
-        params.put("category","美食");
-        if(!TextUtils.isEmpty(region)){
-            params.put("region",region);
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("city", city);
+        params.put("category", "美食");
+        if (!TextUtils.isEmpty(region)) {
+            params.put("region", region);
         }
-        String url = HttpUtil.getURL("http://api.dianping.com/v1/business/find_businesses",params);
-        StringRequest req = new StringRequest(url,listener,null);
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/business/find_businesses", params);
+        StringRequest req = new StringRequest(url, listener, null);
         queue.add(req);
 
     }
 
-    public void getDistricts(String city, Response.Listener<String> listener){
+    public void getDistricts(String city, Response.Listener<String> listener) {
 
 
-        Map<String,String> params = new HashMap<String,String>();
-        params.put("city",city);
-        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_regions_with_businesses",params);
-        StringRequest req = new StringRequest(url,listener,null);
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("city", city);
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_regions_with_businesses", params);
+        StringRequest req = new StringRequest(url, listener, null);
+        queue.add(req);
+
+    }
+
+    public void getComment(String url, Response.Listener<String> listener) {
+
+       StringRequest req = new StringRequest(url,listener,null);
         queue.add(req);
 
     }
@@ -277,11 +284,11 @@ public class VolleyClient {
     /**
      * 自定义请求对象
      */
-    public class TuanBeanRequest extends Request<TuanBean>{
+    public class TuanBeanRequest extends Request<TuanBean> {
 
         Response.Listener<TuanBean> listener;
 
-        public TuanBeanRequest(String url,Response.Listener<TuanBean> listener) {
+        public TuanBeanRequest(String url, Response.Listener<TuanBean> listener) {
             super(Method.GET, url, null);
             this.listener = listener;
         }
@@ -293,7 +300,7 @@ public class VolleyClient {
 
             Gson gson = new Gson();
 
-            TuanBean tuanBean = gson.fromJson(resp,TuanBean.class);
+            TuanBean tuanBean = gson.fromJson(resp, TuanBean.class);
 
             //自己组装一个Volley的Response对象作为方法的返回值
 
@@ -307,5 +314,25 @@ public class VolleyClient {
             listener.onResponse(tuanBean);
         }
     }
+    public class CommentRequest extends StringRequest{
+        Response.Listener<String> listener;
 
+        public CommentRequest(String url, Response.Listener<String> listener) {
+            super(Method.GET, url, listener, null);
+            this.listener = listener;
+        }
+
+        @Override
+        public Map<String, String> getHeaders() throws AuthFailureError {
+
+            Map<String, String> params = super.getHeaders();
+            if(params==null){
+                params = new HashMap<String,String>();
+            }
+            params.put("User-Agent", "Mozilla/5.0 (Windows NT 6.1)");
+
+            return params;
+        }
+
+    }
 }

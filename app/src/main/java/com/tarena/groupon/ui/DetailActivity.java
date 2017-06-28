@@ -1,6 +1,7 @@
 package com.tarena.groupon.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,11 +12,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Response;
 import com.tarena.groupon.R;
+import com.tarena.groupon.adapter.CommentAdapter;
 import com.tarena.groupon.bean.BusinessBean;
 import com.tarena.groupon.bean.Comment;
 import com.tarena.groupon.util.HttpUtil;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -26,14 +30,16 @@ import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class DetailActivity extends Activity {
 
     BusinessBean.Business business;
     @BindView(R.id.lv_detail_details)
     ListView listView;
-    List<String> datas;
-    ArrayAdapter<String> adapter;
+    List<Comment> datas;
+    CommentAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +52,8 @@ public class DetailActivity extends Activity {
     }
 
     private void initListView() {
-        datas = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datas);
+        datas = new ArrayList<Comment>();
+        adapter = new CommentAdapter(this,datas);
         LayoutInflater inflater = LayoutInflater.from(this);
         View headerBusiness = inflater.inflate(R.layout.item_business_layout, listView, false);
         initHeaderBusiness(headerBusiness);
@@ -63,6 +69,16 @@ public class DetailActivity extends Activity {
     private void initHeaderInfo(View view) {
         TextView tvAddress = (TextView) view.findViewById(R.id.tv_header_list_businessaddress);
         tvAddress.setText(business.getAddress());
+        tvAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailActivity.this,FindActivity.class);
+                intent.putExtra("business",business);
+                intent.putExtra("from","detail");
+                startActivity(intent);
+            }
+        });
+
         TextView tvTelphone = (TextView) view.findViewById(R.id.tv_header_list_businesstelephone);
         tvTelphone.setText(business.getTelephone());
     }
@@ -136,26 +152,73 @@ public class DetailActivity extends Activity {
 
     private void refresh() {
 
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        datas.add("aaa");
-        adapter.notifyDataSetChanged();
+       HttpUtil.getCommentByVolley(business.getReview_list_url(),new Response.Listener<String>(){
 
-        HttpUtil.getComment(business.getReview_list_url(), new HttpUtil.OnResponseListener<Document>() {
+            @Override
+            public void onResponse(String s) {
+                //1)解析
+                List<Comment> comments = new ArrayList<Comment>();
+                Document document = Jsoup.parse(s);
+                Elements elements = document.select("div[class=comment-list] li[data-id]");
+                for(Element element:elements){
+                    Comment comment = new Comment();
+                    Element imgElement = element.select("div[class=pic] img").get(0);
+                    comment.setName(imgElement.attr("title"));
+                    comment.setAvatar(imgElement.attr("src"));
+
+                    Elements spanElements = element.select("div[class=user-info] span[class=comm-per]");
+
+                    if(spanElements.size()>0){
+                        //人均 ￥85
+                        comment.setPrice(spanElements.get(0).text().split(" ")[1]+"/人");
+                    }else{
+                        comment.setPrice("");
+                    }
+
+                    Element spanElement = element.select("div[class=user-info] span[title]").get(0);
+
+                    String rate = spanElement.attr("class");
+                    //star40
+                    comment.setRating(rate.split("-")[3]);
+
+                    Element divElement = element.select("div[class=J_brief-cont]").get(0);
+
+                    comment.setContent(divElement.text());
+
+                    Elements imgElements = element.select("div[class=shop-photo] img");
+
+                    int size = imgElements.size();
+
+                    if(size > 3){
+                        size = 3;
+
+                    }
+
+                    String[] imgs = new String[size];
+
+                    for(int i=0;i<size;i++){
+                        imgs[i] = imgElements.get(i).attr("src");
+                    }
+
+                    comment.setImgs(imgs);
+
+                    Element spanEle = element.select("div[class=misc-info] span[class=time]").get(0);
+
+                    comment.setDate(spanEle.text());
+
+
+                    comments.add(comment);
+                }
+
+                Log.d("TAG", "评论内容: "+comments);
+
+                adapter.addAll(comments,true);
+
+            }
+        });
+
+
+       /* HttpUtil.getComment(business.getReview_list_url(), new HttpUtil.OnResponseListener<Document>() {
             @Override
             public void onResponse(Document document) {
                 //1)解析
@@ -218,7 +281,7 @@ public class DetailActivity extends Activity {
                 //2)放到ListView中呈现
 
             }
-        });
+        });*/
 
     }
 }

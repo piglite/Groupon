@@ -2,6 +2,8 @@ package com.tarena.groupon.app;
 
 import android.app.Application;
 
+import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.model.LatLng;
 import com.tarena.groupon.bean.CitynameBean;
 import com.tarena.groupon.util.SPUtil;
 
@@ -18,9 +20,12 @@ public class MyApp extends Application{
     //城市名称的缓存
     public static List<CitynameBean> citynameBeanList;
 
+    public static LatLng myLocation;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        SDKInitializer.initialize(getApplicationContext());
         CONTEXT = this;
         SPUtil spUtil = new SPUtil(this);
         spUtil.setCloseBanner(false);

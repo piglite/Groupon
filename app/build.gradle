@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.tarena.groupon"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
 }
 
 dependencies {
@@ -44,4 +51,5 @@ dependencies {
     compile files('libs/pinyin4j-2.5.1.jar')
     compile 'com.android.support:recyclerview-v7:25+'
     compile files('libs/jsoup-1.10.3.jar')
+    compile files('libs/BaiduLBS_Android.jar')
 }

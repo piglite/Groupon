@@ -233,6 +233,10 @@ public class HttpUtil {
         RetrofitClient.getInstance().getDistricts(city,callback);
     }
 
+   public static void getCommentByVolley(String url,Response.Listener<String> listener){
+        VolleyClient.getInstance().getComment(url,listener);
+   }
+
     public static void getComment(final String url, final OnResponseListener<Document> listener){
 
         new Thread(){

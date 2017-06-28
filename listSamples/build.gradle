@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.viewpagerindicator.sample"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 25
     }
 

@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.utils.DistanceUtil;
 import com.tarena.groupon.R;
+import com.tarena.groupon.app.MyApp;
 import com.tarena.groupon.bean.BusinessBean;
 import com.tarena.groupon.util.HttpUtil;
 
@@ -90,6 +93,13 @@ public class BusinessAdapter extends MyBaseAdapter<BusinessBean.Business>{
         vh.tvInfo.setText(sb.toString());
 
         //TODO vh.tvDistance 学习完了定位之后再回来改写
+        if(MyApp.myLocation!=null){
+            //double distance = DistanceUtil.getDistance(item.getLongitude(), item.getLatitude(), MyApp.myLocation.longitude, MyApp.myLocation.latitude);
+            double distance = DistanceUtil.getDistance(new LatLng(item.getLatitude(),item.getLongitude()),MyApp.myLocation);
+            vh.tvDistance.setText(distance+"米");
+        }else{
+            vh.tvDistance.setText("");
+        }
 
 
 

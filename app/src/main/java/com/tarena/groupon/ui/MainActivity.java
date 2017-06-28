@@ -348,4 +348,13 @@ public class MainActivity extends Activity {
             tvCity.setText(city);
         }
     }
+
+
+    @OnClick(R.id.rb_main_footer_find)
+    public void jump(View view){
+        Intent intent = new Intent(this,FindActivity.class);
+        intent.putExtra("from","main");
+        startActivity(intent);
+    }
+
 }
